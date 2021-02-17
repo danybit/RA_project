@@ -1,28 +1,40 @@
-CellTypes=("BloodCellType" "GastrointestinalCellType" "LiverCellType" "PrimaryCellType" "ESCellType" "KidneyCellType" "LungCellType" "StromalCellType")
+CellTypes=("BloodCellType" "GastrointestinalCellType" "LiverCellType" "PrimaryCellType" "ESCellType" "KidneyCellType" "LungCellType" "StromalCellType" "FatCelltype" "MuscleCellType" "CellLineCellType")
 
+datastorage=("Encode" "Blueprint" "NIH_Roadmap")
 
-len=${#CellTypes[@]}
+lenCellTypes=${#CellTypes[@]}
+
+lenStorage=${#datastorage[@]}
  	
-echo $len 
-database="/home/computer/ManchesterUniProject/Encode/"  #for encode	
+echo $lenCellTypes 
+	
 message="This file is being downloaded "
-for ((i=0; i<$len; i++));
+
+
+for ((j=0; j<$lenStorage; j++));
+do
+
+database="/home/computer/ManchesterUniProject/"${datastorage[$j]}"/"	#for encode
+mkdir ${datastorage[$j]}
+cd ${datastorage[$j]}
+
+for ((i=0; i<$lenCellTypes; i++));
 do
 	echo "$message${CellTypes[$i]}";
-	folder="_f"
-	celltype="$database${CellTypes[$i]}$folder"
-	mkdir "$celltype" #making the celltype folder
-	cd "$celltype" #entering the celltype folder
+
+	mkdir ${CellTypes[$i]} 						#making the celltype folder
+	cd ${CellTypes[$i]} 						#entering the celltype folder
 	cat "$database${CellTypes[$i]}" | while read line; 
 	do 
 		#Selecting only Bed files
 		if [[ ${line:(-3)} == "Bed" ]];then  
 			echo $line;
-			wget $line; 
+			#wget $line; 
 		fi
 	done
 	cd ..
 	
+done
 done
 
 
