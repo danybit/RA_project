@@ -1,0 +1,12 @@
+https://epigenomesportal.ca/tracks/ENCODE/hg38/89294.ENCODE.ENCBS253HIE.H3K36me3.peak_calls.bigBed
+https://epigenomesportal.ca/tracks/ENCODE/hg38/89293.ENCODE.ENCBS253HIE.H3K36me3.signal_unstranded.bigWig
+https://epigenomesportal.ca/tracks/ENCODE/hg38/88690.ENCODE.ENCBS268XWC.CTCF.peak_calls.bigBed
+https://epigenomesportal.ca/tracks/ENCODE/hg38/88689.ENCODE.ENCBS268XWC.CTCF.signal_unstranded.bigWig
+https://epigenomesportal.ca/tracks/ENCODE/hg38/87512.ENCODE.ENCBS481AAA.H3K27ac.peak_calls.bigBed
+https://epigenomesportal.ca/tracks/ENCODE/hg38/87511.ENCODE.ENCBS481AAA.H3K27ac.signal_unstranded.bigWig
+https://epigenomesportal.ca/tracks/ENCODE/hg38/87510.ENCODE.ENCBS481AAA.H3K4me1.peak_calls.bigBed
+https://epigenomesportal.ca/tracks/ENCODE/hg38/87509.ENCODE.ENCBS481AAA.H3K4me1.signal_unstranded.bigWig
+https://epigenomesportal.ca/tracks/ENCODE/hg38/87514.ENCODE.ENCBS483AAA.H3K9me3.peak_calls.bigBed
+https://epigenomesportal.ca/tracks/ENCODE/hg38/87513.ENCODE.ENCBS483AAA.H3K9me3.signal_unstranded.bigWig
+https://epigenomesportal.ca/tracks/ENCODE/hg38/87300.ENCODE.ENCBS613RZL.H3K4me3.peak_calls.bigBed
+https://epigenomesportal.ca/tracks/ENCODE/hg38/87299.ENCODE.ENCBS613RZL.H3K4me3.signal_unstranded.bigWig

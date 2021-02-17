@@ -29,12 +29,14 @@ do
 		#Selecting only Bed files
 		if [[ ${line:(-3)} == "Bed" ]];then  
 			echo $line;
-			#wget $line; 
+			wget $line; 
 		fi
 	done
 	cd ..
 	
 done
+rm -d *
+cd ..
 done
 
 
