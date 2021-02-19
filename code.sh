@@ -14,7 +14,7 @@ cat file | while read storage;
 do
 	
 	#mkdir -p ${storage::-4}						#making the celltype folder						#entering the celltype folder
-	cat "/c/Users/computer/Desktop/ManchesterProject/RA_project/"${datastorage[$j]}"/"${storage::-4}".txt" | while read line; 
+	cat $PWD"/"${datastorage[$j]}"/"${storage::-4}".txt" | while read line; 
 	do 
 		#echo $line
 		#Selecting only Bed files
