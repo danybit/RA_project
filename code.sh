@@ -1,41 +1,32 @@
-CellTypes=("BloodCellType" "GastrointestinalCellType" "LiverCellType" "PrimaryCellType" "ESCellType" "KidneyCellType" "LungCellType" "StromalCellType" "FatCelltype" "MuscleCellType" "CellLineCellType")
-
 datastorage=("Encode" "Blueprint" "NIH_Roadmap")
-
-lenCellTypes=${#CellTypes[@]}
 
 lenStorage=${#datastorage[@]}
  	
-echo $lenCellTypes 
-	
-message="This file is being downloaded "
-
-
 for ((j=0; j<$lenStorage; j++));
 do
 
-database="/home/computer/ManchesterUniProject/"${datastorage[$j]}"/"	#for encode
-mkdir ${datastorage[$j]}
 cd ${datastorage[$j]}
 
-for ((i=0; i<$lenCellTypes; i++));
-do
-	echo "$message${CellTypes[$i]}";
+echo ${datastorage[$j]}
+ls *txt > file
 
-	mkdir ${CellTypes[$i]} 						#making the celltype folder
-	cd ${CellTypes[$i]} 						#entering the celltype folder
-	cat "$database${CellTypes[$i]}" | while read line; 
+cat file | while read storage;
+do
+	
+	#mkdir -p ${storage::-4}						#making the celltype folder						#entering the celltype folder
+	cat "/c/Users/computer/Desktop/ManchesterProject/RA_project/"${datastorage[$j]}"/"${storage::-4}".txt" | while read line; 
 	do 
+		#echo $line
 		#Selecting only Bed files
 		if [[ ${line:(-3)} == "Bed" ]];then  
 			echo $line;
-			wget $line; 
+			#wget $line;
+			#echo *Bed $storage; 
 		fi
 	done
 	cd ..
 	
 done
-rm -d *
 cd ..
 done
 
