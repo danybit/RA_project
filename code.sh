@@ -6,7 +6,7 @@ for ((j=0; j<$lenStorage; j++));
 do
 	cd ${datastorage[$j]}
 	echo ${datastorage[$j]}
-	ls *txt > file
+	ls *txt > file 					#list of celltypes
 
 	cat file | while read storage;
 	do
@@ -18,8 +18,9 @@ do
 			#Selecting only Bed files
 			if [[ ${line:(-3)} == "Bed" ]];then  
 				wget -nc $line; 			#Downloading
-				./bigBedToBed $line ${line::(-6)}.bed;  #transforming into bed
-				rm $line; 				#removing bigbed
+				bbedfile=${line##*/}
+				bigBedToBed $bbedfile stdout | gzip -c > ${bbedfile::(-7)}.bed.gz; #transforming into bed
+				rm $bbedfile; 				#removing bigbed
 			fi
 		done
 		cd ..
