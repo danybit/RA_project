@@ -17,7 +17,9 @@ do
 		do 
 			#Selecting only Bed files
 			if [[ ${line:(-3)} == "Bed" ]];then  
-				wget $line; 		#Downloading
+				wget -nc $line; 			#Downloading
+				./bigBedToBed $line ${line::(-6)}.bed;  #transforming into bed
+				rm $line; 				#removing bigbed
 			fi
 		done
 		cd ..
@@ -25,6 +27,5 @@ do
 	done
 	cd ..
 done
-
 
 
