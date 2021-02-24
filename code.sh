@@ -1,7 +1,7 @@
 datastorage=("Encode" "Blueprint" "NIH_Roadmap")
 				
 lenStorage=${#datastorage[@]}
- 	
+
 for ((j=0; j<$lenStorage; j++));
 do
 	cd ${datastorage[$j]}
@@ -28,8 +28,11 @@ do
 					#transforming into bed
 					if [[ ${bbedfile:(-3)} == "Bed" ]]
 					then
-						bigBedToBed $bbedfile stdout | gzip -c > ${bbedfile::(-7)}.bed.gz; 
-						rm $bbedfile; 	#removing bigbed
+						bigBedToBed $bbedfile stdout 2>/dev/null | 
+						gzip -c > ${bbedfile::(-7)}.bed.gz  ; 
+						rm $bbedfile 	2>/dev/null  #removing bigbed 
+					
+						
 					fi
 				else
 					echo "$line doesn't exist on your filesystem. NOW DOWNLOAD!!" 
