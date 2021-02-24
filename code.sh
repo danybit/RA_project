@@ -18,14 +18,15 @@ do
 			
 			
 			#Selecting only Bed files
-			if [[ ${line:(-3)} == "Bed" ]];then 
-				bbedfile=${line##*/}
+			if [[ ${line:(-3)} == "Bed" ]]
+			then 
+				bbedfile=${line##*/};
 				bb_file=${bbedfile::(-7)}.bed.gz
 				if [[ -f $bb_file ]]
 				then
 					echo "$line exists on your filesystem."
 					#transforming into bed
-					if [[ ${bbedfile:(-3) == "Bed"} ]]
+					if [[ ${bbedfile:(-3)} == "Bed" ]]
 					then
 						bigBedToBed $bbedfile stdout | gzip -c > ${bbedfile::(-7)}.bed.gz; 
 						rm $bbedfile; 	#removing bigbed
