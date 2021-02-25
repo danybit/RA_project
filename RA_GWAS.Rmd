@@ -1,0 +1,28 @@
+---
+title: "RA_project"
+author: "Dany"
+date: "2/24/2021"
+output: html_document
+---
+
+
+
+
+```{r}
+getwd()
+df <- as.data.frame(read.table("SNPs/rs734094/proxy72500.txt", header = TRUE))
+variants_in_highLD <- df[which(df$R2>0.9),]
+variants_in_highLD
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
