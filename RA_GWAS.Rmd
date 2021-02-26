@@ -17,6 +17,7 @@ library(haploR)
 df <- as.data.frame(read.table("SNPs/rs734094/proxy72500.txt", header = TRUE))
 variants_in_highLD <- df[which(df$R2>0.9),]
 list_of_rs <- variants_in_highLD[,1]
+list_of_rs
 ```
 
 
@@ -41,6 +42,7 @@ df <- as.data.frame(read.table("SNPs/rs2476601/proxy15461.txt", header = TRUE))
 variants_in_highLD <- df[which(df$R2>0.9),]
 list_of_rs <- variants_in_highLD[,1]
 x <- queryHaploreg(query=list_of_rs)
+list_of_rs
 ```
 
 
@@ -58,6 +60,7 @@ if(length(x)!=0) {
 df <- as.data.frame(read.table("SNPs/rs34695944/proxy69152.txt", header = TRUE))
 variants_in_highLD <- df[which(df$R2>0.9),]
 list_of_rs <- variants_in_highLD[,1]
+write.csv(file = "rs34695944.csv", x = list_of_rs, row.names = FALSE, sep = ",")
 x <- queryHaploreg(query=list_of_rs)
 ```
 
