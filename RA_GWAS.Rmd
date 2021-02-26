@@ -1,28 +1,86 @@
 ---
 title: "RA_project"
-author: "Dany"
 date: "2/24/2021"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
+```{r}
+library(knitr)
+library(haploR)
+```
 
-
+## rs734094
 
 ```{r}
-getwd()
 df <- as.data.frame(read.table("SNPs/rs734094/proxy72500.txt", header = TRUE))
 variants_in_highLD <- df[which(df$R2>0.9),]
-variants_in_highLD
+list_of_rs <- variants_in_highLD[,1]
+```
+
+
+```{r}
+x <- queryHaploreg(query=list_of_rs)
+```
+
+
+```{r}
+if(length(x)!=0) {
+  subset.high.LD <- x[as.numeric(x$r2) > 0.9, 
+                      c("rsID", "r2", "chr", "is_query_snp", "pos_hg38", "ref", "alt")]
+  kable(subset.high.LD)
+}
+
+```
+
+## rs2476601
+
+```{r}
+df <- as.data.frame(read.table("SNPs/rs2476601/proxy15461.txt", header = TRUE))
+variants_in_highLD <- df[which(df$R2>0.9),]
+list_of_rs <- variants_in_highLD[,1]
+x <- queryHaploreg(query=list_of_rs)
+```
+
+
+```{r}
+if(length(x)!=0) {
+  subset.high.LD <- x[as.numeric(x$is_query_snp) == 1, 
+                      c("rsID", "r2", "chr", "pos_hg38", "is_query_snp", "ref", "alt")]
+  kable(subset.high.LD)
+}
+```
+
+## rs34695944
+
+```{r}
+df <- as.data.frame(read.table("SNPs/rs34695944/proxy69152.txt", header = TRUE))
+variants_in_highLD <- df[which(df$R2>0.9),]
+list_of_rs <- variants_in_highLD[,1]
+x <- queryHaploreg(query=list_of_rs)
 ```
 
 ```{r}
+if(length(x)!=0) {
+  subset.high.LD <- x[as.numeric(x$is_query_snp) == 1, 
+                      c("rsID", "r2", "chr", "is_query_snp", "pos_hg38", "ref", "alt")]
+  kable(subset.high.LD)
+}
 ```
 
-```{r}
-```
+## all the three (chr 11,1 2): rs34695944, rs2476601 and rs734094
 
 ```{r}
+x <- queryHaploreg(query=c("rs34695944","rs2476601","rs734094"))
 ```
 
+
 ```{r}
+if(length(x)!=0) {
+  subset.high.LD <- x[as.numeric(x$r2) > 0.9, 
+                      c("rsID", "r2", "chr", "is_query_snp", "pos_hg38", "ref", "alt")]
+  kable(subset.high.LD)
+}
+
 ```
