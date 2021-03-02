@@ -1,0 +1,514 @@
+<!doctype HTML>
+<meta charset = 'utf-8'>
+<html>
+  <head>
+    
+    <script src='https://forge2.altiusinstitute.org/libraries/dimple/js/d3.v3.js' type='text/javascript'></script>
+    <script src='https://forge2.altiusinstitute.org/libraries/dimple/js/dimple.v2.1.0.js' type='text/javascript'></script>
+    
+    <style>
+    .rChart {
+      display: block;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 2000px;
+      height: 900px;
+    }  
+    </style>
+    
+  </head>
+  <body >
+    
+    <div id = 'chartcb8a5d06d148' class = 'rChart dimple'></div>    
+    <script type="text/javascript">
+  var opts = {
+ "dom": "chartcb8a5d06d148",
+"width":     2000,
+"height":      900,
+"xAxis": {
+ "type": "addCategoryAxis",
+"showPercent": false,
+"grouporderRule": "TissueCell",
+"orderRule": [ "Bone Marrow -- Acute_myeloid_leukemia", "Cell Line -- DG-75_Sporadic_Burkitt_lymphoma", "Cell Line -- KARPAS-422_Germinal_Center_B-Cell-Like_Diffuse_Large_B-Cell_Lymphoma", "Cell Line -- SU-DHL-5_Germinal_Center_B-Cell-Like_Diffuse_Large_B-Cell_Lymphoma", "Cell Line -- U-266_Multiple_myeloma", "Cell Line -- Z-138_Mantle_cell_lymphoma", "Cord Blood -- CD14_positive_CD16_negative_classical_monocyte", "Cord Blood -- CD34-negative_CD41-positive_CD42-positive_megakaryocyte_cell", "Venous Blood -- CD14-positive_CD16-negative_classical_monocyte", "Venous Blood -- inflammatory_macrophage", "Venous Blood -- macrophage", "Venous Blood -- macrophage_-_T_6days_B-glucan", "Venous Blood -- macrophage_-_T_6days_LPS", "Venous Blood -- macrophage_-_T_6days_untreated", "Venous Blood -- monocyte_-_T_0days" ] 
+},
+"yAxis": {
+ "type": "addMeasureAxis",
+"showPercent": false 
+},
+"zAxis": [],
+"colorAxis": {
+ "type": "addColorAxis",
+"colorSeries": "Class2",
+"palette": [ "red", "#FF82ab", "lightblue" ] 
+},
+"defaultColors": [],
+"layers": [],
+"legend": [],
+"x": "TissueCell",
+"y": "log10pvalue",
+"groups": [ "TissueCell", "Accession", "Pvalue", "Qvalue", "Datatype", "Probe", "Class2" ],
+"type": "bubble",
+"bounds": {
+ "x":       60,
+"y":       50,
+"height":      600,
+"width":     1920 
+},
+"id": "chartcb8a5d06d148" 
+},
+    data = [{"Zscore":4.729,"Pvalue":0.000176,"Cell":"Acute_myeloid_leukemia","Tissue":"Bone Marrow","Datatype":"DHS","File":"S005FH41.DNase.hotspot_v3.20130819.bed.gz","Probe":"rs10152591,rs10872479,rs10917571,rs12519914,rs1422673,rs1883832,rs2069235,rs4341355,rs4409785,rs7241016,rs7318817,rs734094,rs947474,rs9927316","Accession":"NA","Qvalue":0.000933,"Class":1,"Class2":1,"log10pvalue":3.75448733218585,"TissueCell":"Bone Marrow -- Acute_myeloid_leukemia"},{"Zscore":2.654,"Pvalue":0.0255,"Cell":"DG-75_Sporadic_Burkitt_lymphoma","Tissue":"Cell Line","Datatype":"DHS","File":"BP_DG-75_d01.DNase.hotspot_v3.20130819.bed.gz","Probe":"rs1422673,rs1883832,rs1953126,rs479777,rs911760,rs947474","Accession":"NA","Qvalue":0.0305,"Class":3,"Class2":2,"log10pvalue":1.59345981956604,"TissueCell":"Cell Line -- DG-75_Sporadic_Burkitt_lymphoma"},{"Zscore":2.443,"Pvalue":0.0346,"Cell":"KARPAS-422_Germinal_Center_B-Cell-Like_Diffuse_Large_B-Cell_Lymphoma","Tissue":"Cell Line","Datatype":"DHS","File":"bp_KARPAS-422_d01.DNase.hotspot_v3.20131126.bed.gz","Probe":"rs10872479,rs1883832,rs34480360,rs734094,rs911760,rs9927316","Accession":"NA","Qvalue":0.0371,"Class":3,"Class2":2,"log10pvalue":1.46092390120722,"TissueCell":"Cell Line -- KARPAS-422_Germinal_Center_B-Cell-Like_Diffuse_Large_B-Cell_Lymphoma"},{"Zscore":3.979,"Pvalue":0.00372,"Cell":"SU-DHL-5_Germinal_Center_B-Cell-Like_Diffuse_Large_B-Cell_Lymphoma","Tissue":"Cell Line","Datatype":"DHS","File":"bp_SU-DHL-5_d01.DNase.hotspot_v3.20131126.bed.gz","Probe":"rs10872479,rs1883832,rs34480360,rs7241016,rs734094,rs947474,rs9927316","Accession":"NA","Qvalue":0.00587,"Class":2,"Class2":1,"log10pvalue":2.4294570601181,"TissueCell":"Cell Line -- SU-DHL-5_Germinal_Center_B-Cell-Like_Diffuse_Large_B-Cell_Lymphoma"},{"Zscore":3.721,"Pvalue":0.00232,"Cell":"U-266_Multiple_myeloma","Tissue":"Cell Line","Datatype":"DHS","File":"BP_U-266_d01.DNase.hotspot_v3.20130819.bed.gz","Probe":"rs10152591,rs1883832,rs1953126,rs2485362,rs2819464,rs479777,rs798000,rs911760,rs947474","Accession":"NA","Qvalue":0.00435,"Class":1,"Class2":1,"log10pvalue":2.6345120151091,"TissueCell":"Cell Line -- U-266_Multiple_myeloma"},{"Zscore":6.529,"Pvalue":7.7e-07,"Cell":"Z-138_Mantle_cell_lymphoma","Tissue":"Cell Line","Datatype":"DHS","File":"BP_Z-138_d01.DNase.hotspot_v3.20130819.bed.gz","Probe":"rs10152591,rs10872479,rs12530098,rs1422673,rs1883832,rs1953126,rs2069235,rs2306627,rs2736340,rs2819464,rs479777,rs62097857,rs6932056,rs705700,rs7241016,rs734094,rs7731626,rs911760,rs947474","Accession":"NA","Qvalue":2.31e-05,"Class":1,"Class2":1,"log10pvalue":6.11350927482752,"TissueCell":"Cell Line -- Z-138_Mantle_cell_lymphoma"},{"Zscore":4.796,"Pvalue":2.98e-05,"Cell":"CD14_positive_CD16_negative_classical_monocyte","Tissue":"Cord Blood","Datatype":"DHS","File":"C005PS4E.DNase.hotspot_v3.20130819.bed.gz","Probe":"rs10152591,rs10872479,rs10917571,rs1422673,rs1883832,rs1953126,rs2069235,rs2306627,rs2812378,rs34480360,rs4341355,rs4409785,rs479777,rs55762233,rs56787183,rs7241016,rs7318817,rs734094,rs7731626,rs79818725,rs911760,rs947474,rs9927316","Accession":"NA","Qvalue":0.000446,"Class":1,"Class2":1,"log10pvalue":4.52578373592374,"TissueCell":"Cord Blood -- CD14_positive_CD16_negative_classical_monocyte"},{"Zscore":3.875,"Pvalue":0.000841,"Cell":"CD34-negative_CD41-positive_CD42-positive_megakaryocyte_cell","Tissue":"Cord Blood","Datatype":"DHS","File":"C006NS47.DNase.hotspot_v3.20130819.bed.gz","Probe":"rs10152591,rs10872479,rs10917571,rs12519914,rs1422673,rs1883832,rs2812378,rs42044,rs4341355,rs4409785,rs479777,rs7241016,rs7318817,rs734094,rs911760,rs947474,rs9927316","Accession":"NA","Qvalue":0.00229,"Class":1,"Class2":1,"log10pvalue":3.07520400420209,"TissueCell":"Cord Blood -- CD34-negative_CD41-positive_CD42-positive_megakaryocyte_cell"},{"Zscore":1.658,"Pvalue":0.103,"Cell":"CD14-positive_CD16-negative_classical_monocyte","Tissue":"Venous Blood","Datatype":"DHS","File":"C001UY46.DNase.hotspot_v3.20130415.bed.gz","Probe":"rs4341355,rs7241016,rs734094,rs9927316","Accession":"NA","Qvalue":0.103,"Class":3,"Class2":3,"log10pvalue":0.987162775294828,"TissueCell":"Venous Blood -- CD14-positive_CD16-negative_classical_monocyte"},{"Zscore":4.184,"Pvalue":0.000799,"Cell":"CD14-positive_CD16-negative_classical_monocyte","Tissue":"Venous Blood","Datatype":"DHS","File":"C0010K46.DNase.hotspot_v3.20130415.bed.gz","Probe":"rs10152591,rs10872479,rs1422673,rs1883832,rs34480360,rs479777,rs7241016,rs7318817,rs734094,rs911760,rs947474,rs9927316","Accession":"NA","Qvalue":0.00229,"Class":1,"Class2":1,"log10pvalue":3.09745322068601,"TissueCell":"Venous Blood -- CD14-positive_CD16-negative_classical_monocyte"},{"Zscore":2.502,"Pvalue":0.0292,"Cell":"CD14-positive_CD16-negative_classical_monocyte","Tissue":"Venous Blood","Datatype":"DHS","File":"C0011I43.DNase.hotspot_v3.20130415.bed.gz","Probe":"rs10872479,rs1883832,rs479777,rs7241016,rs734094,rs947474,rs9927316","Accession":"NA","Qvalue":0.0332,"Class":3,"Class2":2,"log10pvalue":1.53461714855158,"TissueCell":"Venous Blood -- CD14-positive_CD16-negative_classical_monocyte"},{"Zscore":3.057,"Pvalue":0.00432,"Cell":"CD14-positive_CD16-negative_classical_monocyte","Tissue":"Venous Blood","Datatype":"DHS","File":"C004084E.DNase.hotspot_v3.20130415.bed.gz","Probe":"rs10152591,rs10872479,rs10917571,rs1883832,rs2069235,rs34480360,rs4341355,rs479777,rs56787183,rs62264113,rs7241016,rs7318817,rs734094,rs7731626,rs911760,rs9927316","Accession":"NA","Qvalue":0.00648,"Class":2,"Class2":1,"log10pvalue":2.36451625318509,"TissueCell":"Venous Blood -- CD14-positive_CD16-negative_classical_monocyte"},{"Zscore":4.246,"Pvalue":0.00175,"Cell":"inflammatory_macrophage","Tissue":"Venous Blood","Datatype":"DHS","File":"S001MJ4A.DNase.hotspot_v3.20130819.bed.gz","Probe":"rs10152591,rs10872479,rs1422673,rs34480360,rs7241016,rs911760,rs947474,rs9927316","Accession":"NA","Qvalue":0.0035,"Class":1,"Class2":1,"log10pvalue":2.75696195131371,"TissueCell":"Venous Blood -- inflammatory_macrophage"},{"Zscore":2.727,"Pvalue":0.0299,"Cell":"inflammatory_macrophage","Tissue":"Venous Blood","Datatype":"DHS","File":"S001MJ48.DNase.hotspot_v3.20130819.bed.gz","Probe":"rs10152591,rs10872479,rs4409785,rs7241016,rs9927316","Accession":"NA","Qvalue":0.0332,"Class":3,"Class2":2,"log10pvalue":1.52432881167557,"TissueCell":"Venous Blood -- inflammatory_macrophage"},{"Zscore":3.615,"Pvalue":0.00258,"Cell":"macrophage_-_T_6days_B-glucan","Tissue":"Venous Blood","Datatype":"DHS","File":"S00CTZ41.DNase.hotspot_v3.20141014.bed.gz","Probe":"rs10152591,rs10872479,rs10917571,rs1883832,rs34480360,rs4341355,rs479777,rs7241016,rs734094,rs911760,rs947474,rs9927316","Accession":"NA","Qvalue":0.00439,"Class":2,"Class2":1,"log10pvalue":2.58838029403677,"TissueCell":"Venous Blood -- macrophage_-_T_6days_B-glucan"},{"Zscore":4.054,"Pvalue":0.00263,"Cell":"macrophage_-_T_6days_B-glucan","Tissue":"Venous Blood","Datatype":"DHS","File":"S00C0J41.DNase.hotspot_v3.20141014.bed.gz","Probe":"rs1422673,rs2069235,rs2819464,rs479777,rs7241016,rs911760,rs947474","Accession":"NA","Qvalue":0.00439,"Class":2,"Class2":1,"log10pvalue":2.58004425151024,"TissueCell":"Venous Blood -- macrophage_-_T_6days_B-glucan"},{"Zscore":4.593,"Pvalue":0.000205,"Cell":"macrophage_-_T_6days_B-glucan","Tissue":"Venous Blood","Datatype":"DHS","File":"S00HTF41.DNase.hotspot_v3.20141014.bed.gz","Probe":"rs10152591,rs10872479,rs12519914,rs1422673,rs1883832,rs1953126,rs2069235,rs4341355,rs479777,rs55762233,rs7318817,rs734094,rs947474,rs9927316","Accession":"NA","Qvalue":0.000933,"Class":1,"Class2":1,"log10pvalue":3.68824613894425,"TissueCell":"Venous Blood -- macrophage_-_T_6days_B-glucan"},{"Zscore":2.23,"Pvalue":0.0552,"Cell":"macrophage_-_T_6days_B-glucan","Tissue":"Venous Blood","Datatype":"DHS","File":"S00JS941.DNase.hotspot_v3.20141014.bed.gz","Probe":"rs10872479,rs7241016,rs734094,rs9927316","Accession":"NA","Qvalue":0.0571,"Class":3,"Class2":3,"log10pvalue":1.2580609222708,"TissueCell":"Venous Blood -- macrophage_-_T_6days_B-glucan"},{"Zscore":3.414,"Pvalue":0.00521,"Cell":"macrophage_-_T_6days_LPS","Tissue":"Venous Blood","Datatype":"DHS","File":"S00BYT41.DNase.hotspot_v3.20141014.bed.gz","Probe":"rs10152591,rs10872479,rs1883832,rs2812378,rs4341355,rs7241016,rs734094,rs947474,rs9927316","Accession":"NA","Qvalue":0.00744,"Class":2,"Class2":1,"log10pvalue":2.28316227670048,"TissueCell":"Venous Blood -- macrophage_-_T_6days_LPS"},{"Zscore":4.101,"Pvalue":0.000943,"Cell":"macrophage_-_T_6days_LPS","Tissue":"Venous Blood","Datatype":"DHS","File":"S00CS041.DNase.hotspot_v3.20141014.bed.gz","Probe":"rs10152591,rs10872479,rs12519914,rs1422673,rs1883832,rs479777,rs7241016,rs7318817,rs734094,rs911760,rs947474,rs9927316","Accession":"NA","Qvalue":0.00236,"Class":1,"Class2":1,"log10pvalue":3.02548830726267,"TissueCell":"Venous Blood -- macrophage_-_T_6days_LPS"},{"Zscore":2.899,"Pvalue":0.00652,"Cell":"macrophage_-_T_6days_LPS","Tissue":"Venous Blood","Datatype":"DHS","File":"S00HSH41.DNase.hotspot_v3.20141014.bed.gz","Probe":"rs10152591,rs10872479,rs10917571,rs1883832,rs2069235,rs2306627,rs2812378,rs34480360,rs4341355,rs479777,rs56787183,rs7241016,rs734094,rs911760,rs947474,rs9927316","Accession":"NA","Qvalue":0.0085,"Class":2,"Class2":1,"log10pvalue":2.18575240426808,"TissueCell":"Venous Blood -- macrophage_-_T_6days_LPS"},{"Zscore":3.998,"Pvalue":0.000531,"Cell":"macrophage_-_T_6days_LPS","Tissue":"Venous Blood","Datatype":"DHS","File":"S00JRB41.DNase.hotspot_v3.20141014.bed.gz","Probe":"rs10152591,rs10872479,rs10917571,rs12519914,rs2812378,rs34480360,rs4341355,rs4409785,rs479777,rs7241016,rs7318817,rs734094,rs911760,rs947474,rs9927316","Accession":"NA","Qvalue":0.00177,"Class":1,"Class2":1,"log10pvalue":3.27490547891853,"TissueCell":"Venous Blood -- macrophage_-_T_6days_LPS"},{"Zscore":4.631,"Pvalue":0.00108,"Cell":"macrophage_-_T_6days_untreated","Tissue":"Venous Blood","Datatype":"DHS","File":"S00BXV41.DNase.hotspot_v3.20141014.bed.gz","Probe":"rs10152591,rs10872479,rs1883832,rs7241016,rs734094,rs911760,rs947474,rs9927316","Accession":"NA","Qvalue":0.00246,"Class":1,"Class2":1,"log10pvalue":2.96657624451305,"TissueCell":"Venous Blood -- macrophage_-_T_6days_untreated"},{"Zscore":4.666,"Pvalue":0.00016,"Cell":"macrophage_-_T_6days_untreated","Tissue":"Venous Blood","Datatype":"DHS","File":"S00CR241.DNase.hotspot_v3.20141014.bed.gz","Probe":"rs10152591,rs10872479,rs1883832,rs1953126,rs2306627,rs2918392,rs34480360,rs4341355,rs62097857,rs734094,rs7731626,rs798000,rs911760,rs947474","Accession":"NA","Qvalue":0.000933,"Class":1,"Class2":1,"log10pvalue":3.79588001734407,"TissueCell":"Venous Blood -- macrophage_-_T_6days_untreated"},{"Zscore":3.442,"Pvalue":0.00812,"Cell":"macrophage_-_T_6days_untreated","Tissue":"Venous Blood","Datatype":"DHS","File":"S00HRJ41.DNase.hotspot_v3.20141014.bed.gz","Probe":"rs12519914,rs1883832,rs34480360,rs4341355,rs479777,rs734094,rs947474","Accession":"NA","Qvalue":0.0102,"Class":2,"Class2":2,"log10pvalue":2.09044397075882,"TissueCell":"Venous Blood -- macrophage_-_T_6days_untreated"},{"Zscore":3.027,"Pvalue":0.00591,"Cell":"macrophage_-_T_6days_untreated","Tissue":"Venous Blood","Datatype":"DHS","File":"S00JQD41.DNase.hotspot_v3.20141014.bed.gz","Probe":"rs10152591,rs10872479,rs1883832,rs2812378,rs34480360,rs4341355,rs479777,rs7241016,rs7318817,rs734094,rs947474,rs9927316","Accession":"NA","Qvalue":0.00806,"Class":2,"Class2":1,"log10pvalue":2.22841251911874,"TissueCell":"Venous Blood -- macrophage_-_T_6days_untreated"},{"Zscore":3.933,"Pvalue":0.00115,"Cell":"macrophage","Tissue":"Venous Blood","Datatype":"DHS","File":"C005VG45.DNase.hotspot_v3.20130819.bed.gz","Probe":"rs10152591,rs10872479,rs1883832,rs34480360,rs4341355,rs479777,rs7241016,rs7318817,rs734094,rs947474,rs9927316","Accession":"NA","Qvalue":0.00246,"Class":1,"Class2":1,"log10pvalue":2.93930215964639,"TissueCell":"Venous Blood -- macrophage"},{"Zscore":4.521,"Pvalue":0.000218,"Cell":"macrophage","Tissue":"Venous Blood","Datatype":"DHS","File":"C006UE47.DNase.hotspot_v3.20130819.bed.gz","Probe":"rs10152591,rs10872479,rs10917571,rs1422673,rs1883832,rs34480360,rs4341355,rs479777,rs7241016,rs7318817,rs734094,rs911760,rs947474,rs9927316","Accession":"NA","Qvalue":0.000933,"Class":1,"Class2":1,"log10pvalue":3.66154350639539,"TissueCell":"Venous Blood -- macrophage"},{"Zscore":5.452,"Pvalue":0.000185,"Cell":"monocyte_-_T_0days","Tissue":"Venous Blood","Datatype":"DHS","File":"S00EPZ41.DNase.hotspot_v3.20141014.bed.gz","Probe":"rs10152591,rs1422673,rs2069235,rs34480360,rs479777,rs7241016,rs734094,rs911760,rs947474,rs9927316","Accession":"NA","Qvalue":0.000933,"Class":1,"Class2":1,"log10pvalue":3.73282827159699,"TissueCell":"Venous Blood -- monocyte_-_T_0days"},{"Zscore":4.784,"Pvalue":0.000264,"Cell":"monocyte_-_T_0days","Tissue":"Venous Blood","Datatype":"DHS","File":"S00JPF41.DNase.hotspot_v3.20141014.bed.gz","Probe":"rs10872479,rs1422673,rs1883832,rs34480360,rs479777,rs7241016,rs7318817,rs734094,rs911760,rs947474,rs9927316","Accession":"NA","Qvalue":0.000989,"Class":1,"Class2":1,"log10pvalue":3.57839607313017,"TissueCell":"Venous Blood -- monocyte_-_T_0days"}];
+  var svg = dimple.newSvg("#" + opts.id, opts.width, opts.height);
+
+  var myChart = new dimple.chart(svg, data);
+  if (opts.bounds) {
+    myChart.setBounds(opts.bounds.x, opts.bounds.y, opts.bounds.width, opts.bounds.height);//myChart.setBounds(80, 30, 480, 330);
+  }
+  //dimple allows use of custom CSS with noFormats
+  if(opts.noFormats) { myChart.noFormats = opts.noFormats; };
+  //for markimekko and addAxis also have third parameter measure
+  //so need to evaluate if measure provided
+  
+  //function to build axes
+  function buildAxis(position,layer){
+    var axis;
+    var axisopts;
+    if (!layer[position+"Axis"]){
+      axisopts = opts[position+"Axis"];
+    } else axisopts = layer[position+"Axis"];
+    
+    if(axisopts.measure) {
+      axis = myChart[axisopts.type](position,layer[position],axisopts.measure);
+    } else {
+      axis = myChart[axisopts.type](position, layer[position]);
+    };
+    if(!(axisopts.type === "addPctAxis")) axis.showPercent = axisopts.showPercent;
+    if (axisopts.orderRule) axis.addOrderRule(axisopts.orderRule);
+    if (axisopts.grouporderRule) axis.addGroupOrderRule(axisopts.grouporderRule);  
+    if (axisopts.overrideMin) axis.overrideMin = axisopts.overrideMin;
+    if (axisopts.overrideMax) axis.overrideMax = axisopts.overrideMax;
+    if (axisopts.inputFormat) axis.dateParseFormat = axisopts.inputFormat;
+    if (axisopts.outputFormat) axis.tickFormat = axisopts.outputFormat;    
+    return axis;
+  };
+  
+  var c = null;
+  if(d3.keys(opts.colorAxis).length > 0) {
+    c = myChart[opts.colorAxis.type](opts.colorAxis.colorSeries,opts.colorAxis.palette) ;
+  }
+  
+  //allow manipulation of default colors to use with dimple
+  if(opts.defaultColors.length) {
+    opts.defaultColors = opts.defaultColors[0];
+    if (typeof(opts.defaultColors) == "function") {
+      //assume this is a d3 scale
+      //for now loop through first 20 but need a better way to handle
+      defaultColorsArray = [];
+      for (var n=0;n<20;n++) {
+        defaultColorsArray.push(opts.defaultColors(n));
+      };
+      opts.defaultColors = defaultColorsArray;
+    }
+    opts.defaultColors.forEach(function(d,i) {
+      opts.defaultColors[i] = new dimple.color(d);
+    })
+    myChart.defaultColors = opts.defaultColors;
+  }  
+  
+  //do series
+  //set up a function since same for each
+  //as of now we have x,y,groups,data,type in opts for primary layer
+  //and other layers reside in opts.layers
+  function buildSeries(layer, hidden){
+    //inherit from primary layer if not intentionally changed or xAxis, yAxis, zAxis null
+    if (!layer.xAxis) layer.xAxis = opts.xAxis;    
+    if (!layer.yAxis) layer.yAxis = opts.yAxis;
+    if (!layer.zAxis) layer.zAxis = opts.zAxis;
+    
+    var x = buildAxis("x", layer);
+    x.hidden = hidden;
+    
+    var y = buildAxis("y", layer);
+    y.hidden = hidden;
+    
+    //z for bubbles
+    var z = null;
+    if (!(typeof(layer.zAxis) === 'undefined') && layer.zAxis.type){
+      z = buildAxis("z", layer);
+    };
+    
+    //here think I need to evaluate group and if missing do null
+    //as the group argument
+    //if provided need to use groups from layer
+    var s = new dimple.series(myChart, null, x, y, z, c, null, dimple.plot[layer.type], dimple.aggregateMethod.avg, dimple.plot[layer.type].stacked);
+    
+    //as of v1.1.4 dimple can use different dataset for each series
+    if(layer.data){
+      //convert to an array of objects
+      //avoid lodash for now
+      datakeys = d3.keys(layer.data)
+      layer.dataarray = layer.data[datakeys[1]].map(function(d,i){
+        var tempobj = {}
+        datakeys.forEach(function(key){
+          tempobj[key] = layer.data[key][i]
+        })
+        return tempobj
+      })
+      s.data = layer.dataarray;
+    }
+    
+    //for measure axis dimple sorts at the series level not at axis level
+    ['x','y'].map(function(ax){
+      if( layer[ax + 'Axis'].type=="addMeasureAxis" && layer[ax + 'Axis'].orderRule ){
+        if( typeof layer[ax + 'Axis'].orderRule == "string" ){
+          s.addOrderRule( layer[ax + 'Axis'].orderRule );
+        } else if ( typeof layer[ax + 'Axis'].orderRule == "object" ) {
+          s._orderRules = layer[ax + 'Axis'].orderRule;
+        }
+      }
+    })
+    
+    if(layer.hasOwnProperty("groups")) {
+      s.categoryFields = (typeof layer.groups === "object") ? layer.groups : [layer.groups];
+      //series offers an aggregate method that we will also need to check if available
+      //options available are avg, count, max, min, sum
+    }
+    if (!(typeof(layer.aggregate) === 'undefined')) {
+      s.aggregate = eval(layer.aggregate);
+    }
+    if (!(typeof(layer.lineWeight) === 'undefined')) {
+      s.lineWeight = layer.lineWeight;
+    }
+    if (!(typeof(layer.lineMarkers) === 'undefined')) {
+      s.lineMarkers = layer.lineMarkers;
+    }
+    if (!(typeof(layer.barGap) === 'undefined')) {
+      s.barGap = layer.barGap;
+    }    
+    if (!(typeof(layer.interpolation) === 'undefined')) {
+      s.interpolation = layer.interpolation;
+    } 
+    
+    myChart.series.push(s);
+    
+    /*placeholder fix domain of primary scale for new series data
+    //not working right now but something like this
+    //for now just use overrideMin and overrideMax from rCharts
+    for( var i = 0; i<2; i++) {
+      if (!myChart.axes[i].overrideMin) {
+        myChart.series[0]._axisBounds(i==0?"x":"y").min = myChart.series[0]._axisBounds(i==0?"x":"y").min < s._axisBounds(i==0?"x":"y").min ? myChart.series[0]._axisBounds(i==0?"x":"y").min : s._axisBounds(i==0?"x":"y").min;
+      }
+      if (!myChart.axes[i].overrideMax) {  
+        myChart.series[0]._axisBounds(i==0?"x":"y")._max = myChart.series[0]._axisBounds(i==0?"x":"y").max > s._axisBounds(i==0?"x":"y").max ? myChart.series[0]._axisBounds(i==0?"x":"y").max : s._axisBounds(i==0?"x":"y").max;
+      }
+      myChart.axes[i]._update();
+    }
+    */
+      
+    
+    return s;
+  };
+  
+  buildSeries(opts, false);
+  if (opts.layers.length > 0) {
+    opts.layers.forEach(function(layer){
+      buildSeries(layer, true);
+    })
+  }
+  //unsure if this is best but if legend is provided (not empty) then evaluate
+  if(d3.keys(opts.legend).length > 0) {
+    var l =myChart.addLegend();
+    d3.keys(opts.legend).forEach(function(d){
+      l[d] = opts.legend[d];
+    });
+  }
+  //quick way to get this going but need to make this cleaner
+  if(opts.storyboard) {
+    myChart.setStoryboard(opts.storyboard);
+  };
+  myChart.draw();
+
+</script>
+    
+    
+      <script>
+        myChart.draw()
+        
+        myChart.svg
+          .selectAll('.dimple-bubble')
+          .filter(function(d) { return (d['aggField'][3] < 0.01); })
+          .style('fill', function(d) {
+            var datatype = d['aggField'][4];
+            // http://pinetools.com/darken-color to darken hex values for chromatin states
+            switch (datatype) {
+              case 'H3K27me3':
+                return '#e5e500';
+              case 'H3K4me1':
+                return '#e41a1c';
+              case 'H3K4me3':
+                return '#4daf4a';
+              case 'H3K36me3':
+                return '#984ea3';
+              case 'H3K9me3':
+                return '#ff7f00';
+              case 'TssA':
+                return '#FF0000';
+              case 'TssAFlnk':
+                return '#FF4500';
+              case 'TxFlnk':
+                return '#32CD32';
+              case 'Tx':
+                return '#008000';
+              case 'TxWk':
+                return '#006400';
+              case 'EnhG':
+                return '#C2E105';
+              case 'Enh':
+                return '#E5E500';
+              case 'ZNF-Rpts':
+                return '#3D7B66';
+              case 'Het':
+                return '#8A91D0';
+              case 'TssBiv':
+                return '#CD5C5C';
+              case 'BivFlnk':
+                return '#E9967A';
+              case 'EnhBiv':
+                return '#BDB76B';
+              case 'ReprPC':
+                return '#808080';
+              case 'ReprPCWk':
+                return '#C0C0C0';
+              case 'Quies':
+                return '#F8F8F8';
+              default:
+                return '#ff0000';
+            }
+          })
+          .style('stroke', function(d) {
+            var datatype = d['aggField'][4];
+            switch (datatype) {
+              case 'H3K27me3':
+                return '#e5e500';
+              case 'H3K4me1':
+                return '#e41a1c';
+              case 'H3K4me3':
+                return '#4daf4a';
+              case 'H3K36me3':
+                return '#984ea3';
+              case 'H3K9me3':
+                return '#ff7f00';
+              case 'TssA':
+                return '#7f0000';
+              case 'TssAFlnk':
+                return '#7f2200';
+              case 'TxFlnk':
+                return '#186618';
+              case 'Tx':
+                return '#004000';
+              case 'TxWk':
+                return '#006400';
+              case 'EnhG':
+                return '#003200';
+              case 'Enh':
+                return '#727200';
+              case 'ZNF-Rpts':
+                return '#1e3d32';
+              case 'Het':
+                return '#31387b';
+              case 'TssBiv':
+                return '#712222';
+              case 'BivFlnk':
+                return '#983919';
+              case 'EnhBiv':
+                return '#66622d';
+              case 'ReprPC':
+                return '#404040';
+              case 'ReprPCWk':
+                return '#606060';
+              case 'Quies':
+                return '#7c7c7c';
+              default:
+                return '#ff0000';
+            }
+          });
+          
+        myChart.svg
+          .selectAll('.dimple-bubble')
+          .filter(function(d) { return ((d['aggField'][3] >= 0.01) && (d['aggField'][3] < 0.05)); })
+          .style('stroke', function(d) {
+            var datatype = d['aggField'][4];
+            switch (datatype) {
+              case 'H3K27me3':
+                return '#e5e500';
+              case 'H3K4me1':
+                return '#e41a1c';
+              case 'H3K4me3':
+                return '#4daf4a';
+              case 'H3K36me3':
+                return '#984ea3';
+              case 'H3K9me3':
+                return '#ff7f00';
+              case 'TssA':
+                return '#FF0000';
+              case 'TssAFlnk':
+                return '#FF4500';
+              case 'TxFlnk':
+                return '#32CD32';
+              case 'Tx':
+                return '#008000';
+              case 'TxWk':
+                return '#006400';
+              case 'EnhG':
+                return '#C2E105';
+              case 'Enh':
+                return '#E5E500';
+              case 'ZNF-Rpts':
+                return '#3D7B66';
+              case 'Het':
+                return '#8A91D0';
+              case 'TssBiv':
+                return '#CD5C5C';
+              case 'BivFlnk':
+                return '#E9967A';
+              case 'EnhBiv':
+                return '#BDB76B';
+              case 'ReprPC':
+                return '#808080';
+              case 'ReprPCWk':
+                return '#C0C0C0';
+              case 'Quies':
+                return '#F8F8F8';
+              default:
+                return '#FF82ab';
+            }
+          })
+          .style('stroke-width', '2')
+          .style('fill', 'white');
+          
+        myChart.svg
+          .selectAll('.dimple-bubble')
+          .filter(function(d) { return (d['aggField'][3] >= 0.05); })
+          .style('stroke', 'rgb(173, 216, 230)')
+          .style('fill', 'white');
+    
+        // Substitutes TissueCell labels in X-axis by Cell labels
+        myChart.axes[1].shapes
+          .selectAll('text')
+          .text(function (d) { 
+               var i;
+               for (i = 0; i < data.length; i += 1) {
+                   if (data[i].TissueCell === d) {
+                       return data[i].Cell;
+                   }
+               }
+          })
+          .style('text-anchor', 'start');
+    
+    //       .attr('transform', function() {
+    //         var t = d3.transform(d3.select(this).attr('transform'));
+    //         return 'rotate(-90) translate(' + -1*parseFloat(t.translate[0]) + ', ' + -0.7*parseFloat(t.translate[1]) + ')';
+    //       });
+    
+        // Adds title for X-axis
+        myChart.axes[1].titleShape
+            .style('font-size', 20)
+    
+        // Adds title for Y-axis
+        myChart.axes[2].titleShape
+            .style('font-size', 20)
+            .text('-log10 binomial p-value')
+    
+        // Adds main title
+        myChart.svg.append('text')
+          .attr('x', 1000)
+          .attr('y', 25)
+          .attr('font-size', 24)
+          .attr('font-family', 'Arial')
+          .attr('font-weight', 'bold')
+          .style('fill', 'black')
+          .attr('text-anchor', 'middle')
+          .text('DMPs in DNase I sites (probably TF sites) in cell lines for blueprint RA_project')
+        
+        // Adds labels for tissues
+        myChart.svg.insert('text', 'g')
+          .attr('x', 0)
+          .attr('y', 0)
+          .attr('font-size', 16)
+          .attr('font-family', 'Arial')
+          .style('fill', '#A9A9A9')
+          .attr('transform', 'translate(129, 60) rotate(-90)')
+          .attr('text-anchor', 'end')
+          .text('Bone Marrow')
+    
+        // Adds labels for tissues
+        myChart.svg.insert('text', 'g')
+          .attr('x', 0)
+          .attr('y', 0)
+          .attr('font-size', 16)
+          .attr('font-family', 'Arial')
+          .style('fill', '#A9A9A9')
+          .attr('transform', 'translate(513, 60) rotate(-90)')
+          .attr('text-anchor', 'end')
+          .text('Cell Line')
+    
+        // Adds labels for tissues
+        myChart.svg.insert('text', 'g')
+          .attr('x', 0)
+          .attr('y', 0)
+          .attr('font-size', 16)
+          .attr('font-family', 'Arial')
+          .style('fill', '#A9A9A9')
+          .attr('transform', 'translate(961, 60) rotate(-90)')
+          .attr('text-anchor', 'end')
+          .text('Cord Blood')
+    
+        // Adds labels for tissues
+        myChart.svg.insert('text', 'g')
+          .attr('x', 0)
+          .attr('y', 0)
+          .attr('font-size', 16)
+          .attr('font-family', 'Arial')
+          .style('fill', '#A9A9A9')
+          .attr('transform', 'translate(1537, 60) rotate(-90)')
+          .attr('text-anchor', 'end')
+          .text('Venous Blood')
+    
+        
+        // Adds vertical lines between tissues
+        myChart.svg.append('line')
+          .attr('x1', 188)
+          .attr('y1', 50)
+          .attr('x2', 188)
+          .attr('y2', 650)
+          .style('stroke', '#A9A9A9')
+          .style('stroke-dasharray', '10,3,3,3')
+    
+        // Adds vertical lines between tissues
+        myChart.svg.append('line')
+          .attr('x1', 828)
+          .attr('y1', 50)
+          .attr('x2', 828)
+          .attr('y2', 650)
+          .style('stroke', '#A9A9A9')
+          .style('stroke-dasharray', '10,3,3,3')
+    
+        // Adds vertical lines between tissues
+        myChart.svg.append('line')
+          .attr('x1', 1084)
+          .attr('y1', 50)
+          .attr('x2', 1084)
+          .attr('y2', 650)
+          .style('stroke', '#A9A9A9')
+          .style('stroke-dasharray', '10,3,3,3')
+    
+        // Adds vertical line at the far right of the plot
+        myChart.svg.append('line')
+          .attr('x1', 1980)
+          .attr('y1', 50)
+          .attr('x2', 1980)
+          .attr('y2', 650)
+          .style('stroke', 'rgb(0,0,0)')
+      </script>
+        
+  </body>
+</html>

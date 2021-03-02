@@ -1,0 +1,43 @@
+---
+title: "RA_project"
+date: "2/24/2021"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r}
+library(knitr)
+library(haploR)
+library(LDlinkR)
+library(qqman)
+```
+
+```{r}
+SNPs <- as.data.frame(read.table("listOfSnps", header = TRUE))
+BigTable <- data.frame(matrix(data = NA, ncol = length(c("rsID", "r2", "chr", "is_query_snp", "pos_hg38", "ref", "alt"))))
+colnames(BigTable) <- c("rsID", "r2", "chr", "pos_hg38", "is_query_snp", "ref", "alt")
+
+
+for (snp in c("rs2258734","rs7540342","rs4655698") ){
+  
+  my_proxies <- LDproxy(snp = snp, 
+                        pop = "YRI", 
+                        r2d = "r2", 
+                        token = "6796839e9d86"
+                       )
+  
+  df = my_proxies
+  variants_in_highLD <- df[which(df$R2>0.8),]
+  list_of_rs <- variants_in_highLD[,1]
+  
+  
+  x <- queryHaploreg(query=list_of_rs)
+  if(length(x)!=0) {
+  subset.high.LD <- x[as.numeric(x$is_query_snp) >0.8, 
+                      c("rsID", "r2", "chr", "pos_hg38", "is_query_snp", "ref", "alt")]
+  BigTable = rbind(BigTable,subset.high.LD)
+  
+}
+}
+```
