@@ -2,7 +2,9 @@
 title: "regulomaDB"
 author: "Dany"
 date: "3/5/2021"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -23,7 +25,7 @@ colnames(regulomeTable) <- (c("RS_Number","Coord","Alleles","MAF","Distance","Dp
 fileName = "listOfSnps.txt" #The file containing all the provided SNPs
 con=file(fileName,open="r")
 SNPs <-readLines(con)
-for (snp in SNPs ){
+for (snp in SNPs[1:10] ){   #selected only 10 for test
   
   my_proxies <- LDproxy(snp = snp, 
                         pop = c("EUR","EAS", "SAS"), 
