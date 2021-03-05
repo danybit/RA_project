@@ -1,0 +1,48 @@
+---
+title: "regulomaDB"
+author: "Dany"
+date: "3/5/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(LDlinkR)
+library(qqman)
+```
+
+```{r}
+regulomeTable <- data.frame(matrix(data = NA, ncol = 10))
+colnames(regulomeTable) <- (c("RS_Number","Coord","Alleles","MAF","Distance","Dprime","R2","Correlated_Alleles","RegulomeDB","Function"))
+```
+
+```{r}
+fileName = "listOfSnps.txt" #The file containing all the provided SNPs
+con=file(fileName,open="r")
+SNPs <-readLines(con)
+for (snp in SNPs ){
+  
+  my_proxies <- LDproxy(snp = snp, 
+                        pop = c("EUR","EAS", "SAS"), 
+                        r2d = "r2", 
+                        token = "6796839e9d86"
+                       )
+  
+  df = my_proxies
+  variants_in_highLD <- df[which(df$R2>0.9),]
+  list_of_rs <- variants_in_highLD
+  regulomeTable = rbind(regulomeTable,as.data.frame(list_of_rs))
+  
+}
+regulomeTable = regulomeTable[-1,]
+head(regulomeTable)
+```
+
+
+
+```{r}
+write.csv(regulomeTable, "0.regulomeDB_data/regulomeTable_RA.csv", row.names = FALSE)
+```

@@ -1,0 +1,37 @@
+---
+title: "RA_project"
+date: "2/24/2021"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(rmarkdown)
+library(knitr)
+library(haploR)
+```
+
+
+The analysis is aimed to retrieve information regarding the provided list of SNPs
+```{r}
+fileName = "listOfSnps.txt" #The file containing all the provided SNPs
+con=file(fileName,open="r")
+SNPs <-readLines(con)
+x <- queryHaploreg(query=SNPs)
+if(length(x)!=0) {
+subset.high.LD.RA <- x[as.numeric(x$r2) >0.9, 
+                    c("rsID", "r2", "chr", "pos_hg38", "is_query_snp", "ref", "alt")]
+  
+}
+kable(head(subset.high.LD.RA))
+```
+
+```{r}
+write.csv(subset.high.LD.RA, "0.haploReg_data/subset_high_LD_RA.csv", row.names = FALSE)
+```
+

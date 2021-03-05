@@ -1,4 +1,4 @@
-setwd("/var/www/forge2/production/src/html/files/0xD0F46DAC7B7B11EB9F6FC1A5B4A874F8")
+setwd("/home/computer/RA_project/Results_ForgeAnalysis/")
 results<-read.table("RA_project.GWAS.erc.chart.tsv.gz", header = TRUE, sep="\t")
 
 # Class splits the data into non-significant, marginally significant and significant according to 0.05 and 0.01 (in -log10 scale)
@@ -42,6 +42,7 @@ bounds.height=dplot.height - 300
 bounds.width=dplot.width - bounds.x - 20
 
 # Create a dimple plot, showing p-value vs cell, split data by tissue, cell, probe, etc to see individual points instead of aggregate avg
+library(rCharts)
 d1 <- dPlot(
   y = 'log10pvalue',
   x = c('TissueCell'),
@@ -93,6 +94,7 @@ lines.string = paste(paste0("
       .style('stroke-dasharray', '10,3,3,3')
 "), collapse='')
 
+library(rjson)
 # Adds some JS to be run after building the plot to get the image we want
 d1$setTemplate(afterScript = paste0("
   <script>
@@ -306,4 +308,4 @@ d1$setTemplate(afterScript = paste0("
 "))
 
 
-d1$save('RA_project.GWAS.erc.dchart.html', cdn = F)
+d1$save('/home/computer/Desktop/RA_project.GWAS.erc.dchart.html', cdn = F)

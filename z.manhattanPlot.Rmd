@@ -1,0 +1,33 @@
+---
+title: "ManhattanPlot"
+author: "Dany"
+date: "3/5/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+test <- my_output#head(my_output[which(my_output$Tissue=="Whole Blood"),])
+test <- cbind(as.data.frame(test$RS_ID),
+              as.numeric(t(
+                as.data.frame(
+                  strsplit(
+                    do.call(
+                      rbind, strsplit((test$Position), ":"))[,1],"chr"),
+                col.names = F)[2,])),
+              as.data.frame(1:nrow(x = test)),
+              as.data.frame(as.numeric(test$P_value)))
+colnames(test) <- c("SNP","chr","BP", "position")
+rownames(test) <- as.list(1:nrow(x = test))
+manhattan(test)
+```
+
+```{r}
+GWASout <- GWASout[order(GWASout$Neg_logP, decreasing = T),]
+png(paste(target, ".png", sep = ""), height = 500,width = 1000)
+GWAS_Manhattan(GWASout)
+```

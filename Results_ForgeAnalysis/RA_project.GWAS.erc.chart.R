@@ -1,4 +1,4 @@
-setwd('/var/www/forge2/production/src/html/files/0xD0F46DAC7B7B11EB9F6FC1A5B4A874F8')
+setwd('/home/computer/RA_project/Results_ForgeAnalysis/')
 results<-read.table('RA_project.GWAS.erc.chart.tsv.gz', header=TRUE,sep='\t')
 
 # Class splits the data into non-significant, marginally significant and significant according to 0.05 and 0.01 (in -log10 scale)
@@ -16,7 +16,7 @@ results$TissueCell <- apply(results[, c('Tissue', 'Cell')], 1, paste, collapse =
 results$TissueCell <- factor(results$TissueCell, levels=tissue.cell.order2)
 
 # Plot an empty chart first
-pdf('RA_project.GWAS.erc.chart.pdf', width=22.4, height=8)
+pdf('/home/computer/Desktop/RA_project.GWAS.erc.chart.pdf', width=22.4, height=8)
 ymax = max(-log10(results$Pvalue), na.rm=TRUE)*1.1
 ymin = -0.1
 par(mar=c(15.5,4,3,1)+0.1)
